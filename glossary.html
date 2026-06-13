@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glosario — Moda ECCI</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">
+      <span class="dot"></span> Moda ECCI
+    </a>
+    <div class="topbar-controls">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay">
+    <nav>
+      <a href="index.html"          data-es="Inicio"         data-en="Home">Inicio</a>
+      <div class="menu-divider"></div>
+      <a href="experiencia.html"    data-es="Experiencia"    data-en="Experience">Experiencia</a>
+      <div class="menu-divider"></div>
+      <a href="glossary.html"       data-es="Glosario"       data-en="Glossary">Glosario</a>
+      <div class="menu-divider"></div>
+      <a href="sostenibilidad.html" data-es="Sostenibilidad" data-en="Sustainability">Sostenibilidad</a>
+    </nav>
+    <p class="menu-close-hint">ESC para cerrar</p>
+  </div>
+
+  <!-- PAGE HEADER -->
+  <div class="page-hdr">
+    <div class="container">
+      <p class="eyebrow">
+        <span class="txt-es">Referencia técnica bilingüe</span>
+        <span class="txt-en">Bilingual technical reference</span>
+      </p>
+      <h1>
+        <span class="txt-es">Glosario <em style="font-style:italic; color:var(--red);">técnico</em></span>
+        <span class="txt-en">Technical <em style="font-style:italic; color:var(--red);">Glossary</em></span>
+      </h1>
+      <p class="txt-es">Más de 20 términos aprendidos en Moda ECCI, con traducción al inglés y definición. Haz clic en cualquier término para ver el detalle.</p>
+      <p class="txt-en">Over 20 terms learned at ECCI Fashion, with Spanish translation and definition. Click on any term to see details.</p>
+    </div>
+  </div>
+
+  <!-- ── GLOSARIO ── -->
+  <section class="section">
+    <div class="container">
+
+      <!-- ALERT INFO -->
+      <div class="alert-moda info reveal">
+        <span class="alert-icon">📘</span>
+        <div>
+          <span class="txt-es">Los términos marcados en <strong style="color:var(--red);">rojo</strong> corresponden a conceptos directamente relacionados con el desarrollo Frontend y la experiencia de usuario (UX).</span>
+          <span class="txt-en">Terms marked in <strong style="color:var(--red);">red</strong> correspond to concepts directly related to Frontend development and user experience (UX).</span>
+          <button class="alert-dismiss ms-3" style="background:none;border:none;cursor:pointer;color:inherit;font-size:1.1rem;" title="Cerrar">✕</button>
+        </div>
+      </div>
+
+      <!-- SEARCH -->
+      <input
+        type="text"
+        class="glossary-search reveal"
+        id="glossarySearch"
+        placeholder="🔍  Buscar / Search..."
+      />
+
+      <!-- TABLA -->
+      <div class="glossary-wrap reveal">
+        <table class="glossary-table">
+          <thead>
+            <tr>
+              <th>
+                <span class="txt-es">Inglés</span>
+                <span class="txt-en">English</span>
+              </th>
+              <th>
+                <span class="txt-es">Español</span>
+                <span class="txt-en">Spanish</span>
+              </th>
+              <th>
+                <span class="txt-es">Definición</span>
+                <span class="txt-en">Definition</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Color Theory','Teoría del Color','El estudio sistemático de cómo los colores se relacionan entre sí y cómo los percibe el ojo humano. Abarca el círculo cromático, las armonías, el contraste y la psicología del color.')">
+              <td class="term-en">Color Theory</td>
+              <td class="term-es">Teoría del Color</td>
+              <td class="term-def txt-es">Estudio de cómo los colores se relacionan y son percibidos. Base del diseño visual y la experiencia de usuario.</td>
+              <td class="term-def txt-en">Study of how colors relate and are perceived. Foundation of visual design and user experience.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Color Wheel','Círculo Cromático','Representación circular del espectro visible que organiza los colores según sus relaciones de mezcla y contraste. Introducido por Newton (1666) y perfeccionado por Itten en la Bauhaus.')">
+              <td class="term-en">Color Wheel</td>
+              <td class="term-es">Círculo Cromático</td>
+              <td class="term-def txt-es">Diagrama circular que organiza los colores del espectro visible según sus relaciones de mezcla y contraste.</td>
+              <td class="term-def txt-en">Circular diagram organizing visible spectrum colors according to their mixing and contrast relationships.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Pantone','Pantone','Sistema estandarizado de identificación del color creado en 1963 por Lawrence Herbert. Asigna un código único a cada tono para garantizar reproducción exacta en cualquier medio de impresión o producción digital.')">
+              <td class="term-en">Pantone</td>
+              <td class="term-es">Pantone</td>
+              <td class="term-def txt-es">Sistema universal de identificación cromática que garantiza reproducción exacta del color en cualquier medio.</td>
+              <td class="term-def txt-en">Universal color identification system ensuring exact color reproduction in any medium.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Complementary Colors','Colores Complementarios','Colores ubicados en posiciones opuestas dentro del círculo cromático. Al combinarse crean el máximo contraste visual. Ejemplo: rojo y verde, azul y naranja, amarillo y violeta.')">
+              <td class="term-en">Complementary Colors</td>
+              <td class="term-es">Colores Complementarios</td>
+              <td class="term-def txt-es">Colores opuestos en el círculo cromático; generan el máximo contraste visual entre sí.</td>
+              <td class="term-def txt-en">Colors opposite on the color wheel; they generate maximum visual contrast between each other.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Triadic Harmony','Armonía Tríada','Combinación de tres colores equidistantes en el círculo cromático, formando un triángulo equilátero. Crea paletas vibrantes y equilibradas.')">
+              <td class="term-en">Triadic Harmony</td>
+              <td class="term-es">Armonía Tríada</td>
+              <td class="term-def txt-es">Tres colores equidistantes en el círculo que forman un triángulo equilátero. Resultado: paleta vibrante y equilibrada.</td>
+              <td class="term-def txt-en">Three equidistant colors on the wheel forming an equilateral triangle. Result: vibrant and balanced palette.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Analogous Colors','Colores Análogos','Grupo de tres o más colores adyacentes en el círculo cromático. Crean composiciones armoniosas y agradables a la vista, frecuentemente usadas en diseño de marca.')">
+              <td class="term-en">Analogous Colors</td>
+              <td class="term-es">Colores Análogos</td>
+              <td class="term-def txt-es">Colores adyacentes en el círculo cromático. Generan armonía y sensación de cohesión visual.</td>
+              <td class="term-def txt-en">Adjacent colors on the color wheel. They generate harmony and a sense of visual cohesion.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Color Semiology','Semiología del Color','Disciplina que estudia el significado cultural, emocional y simbólico de los colores. Cada color comunica mensajes diferentes según el contexto cultural y el medio de aplicación.')">
+              <td class="term-en">Color Semiology</td>
+              <td class="term-es">Semiología del Color</td>
+              <td class="term-def txt-es">Estudio de los significados culturales, emocionales y simbólicos que transmiten los colores.</td>
+              <td class="term-def txt-en">Study of the cultural, emotional, and symbolic meanings that colors convey.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Color Psychology','Psicología del Color','Campo que estudia cómo los colores influyen en el comportamiento, las emociones y las decisiones humanas. Goethe fue su pionero con su Teoría de los Colores (1810).')">
+              <td class="term-en">Color Psychology</td>
+              <td class="term-es">Psicología del Color</td>
+              <td class="term-def txt-es">Estudio del impacto emocional y conductual que los colores ejercen sobre las personas. Aplicación directa en marketing y UX.</td>
+              <td class="term-def txt-en">Study of the emotional and behavioral impact colors have on people. Direct application in marketing and UX.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Hue','Matiz / Tono','La propiedad del color que lo distingue de otro: rojo, azul, verde, etc. Es la denominación "pura" del color antes de modificar su luminosidad o saturación.')">
+              <td class="term-en">Hue</td>
+              <td class="term-es">Matiz / Tono</td>
+              <td class="term-def txt-es">La denominación "pura" de un color: rojo, azul, verde. Propiedad que diferencia un color de otro.</td>
+              <td class="term-def txt-en">The "pure" name of a color: red, blue, green. The property that distinguishes one color from another.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Saturation','Saturación','La intensidad o pureza de un color. Un color con alta saturación es vibrante y puro; con baja saturación tiende al gris. En CSS se controla con la función hsl().')">
+              <td class="term-en">Saturation</td>
+              <td class="term-es">Saturación</td>
+              <td class="term-def txt-es">Intensidad o pureza de un color. Alta saturación = vibrante. Baja saturación = apagado, cercano al gris.</td>
+              <td class="term-def txt-en">Intensity or purity of a color. High saturation = vibrant. Low saturation = muted, close to gray.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Brightness / Value','Luminosidad / Valor','La cantidad de luz en un color. Determina qué tan claro u oscuro es. En diseño digital se gestiona con los valores HSL o ajustando opacidad y overlays.')">
+              <td class="term-en">Brightness / Value</td>
+              <td class="term-es">Luminosidad / Valor</td>
+              <td class="term-def txt-es">Cantidad de luz de un color. Determina si un color es claro u oscuro. Crítico para contraste y accesibilidad.</td>
+              <td class="term-def txt-en">Amount of light in a color. Determines whether a color is light or dark. Critical for contrast and accessibility.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Color Contrast','Contraste de Color','Diferencia de luminosidad o tono entre dos colores. Las pautas WCAG 2.1 exigen una relación de contraste mínima de 4.5:1 para texto normal en interfaces digitales.')">
+              <td class="term-en">Color Contrast</td>
+              <td class="term-es">Contraste de Color</td>
+              <td class="term-def txt-es">Diferencia de luminosidad entre colores. Las WCAG exigen contraste mínimo 4.5:1 para accesibilidad web.</td>
+              <td class="term-def txt-en">Luminosity difference between colors. WCAG requires minimum 4.5:1 contrast ratio for web accessibility.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Color Token','Token de Color','Variable que representa un valor de color dentro de un sistema de diseño digital. Equivalente digital del sistema Pantone. Ejemplo en CSS: --primary: #C41230')">
+              <td class="term-en">Color Token</td>
+              <td class="term-es">Token de Color</td>
+              <td class="term-def txt-es">Variable que almacena un color en un sistema de diseño digital. Equivalente del Pantone en CSS: --primary: #C41230.</td>
+              <td class="term-def txt-en">Variable storing a color in a digital design system. CSS equivalent of Pantone: --primary: #C41230.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Primary Colors','Colores Primarios','En el modelo de color pigmento (RYB): Rojo, Amarillo y Azul. Son los colores que no pueden obtenerse mezclando otros y de los cuales se derivan todos los demás.')">
+              <td class="term-en">Primary Colors</td>
+              <td class="term-es">Colores Primarios</td>
+              <td class="term-def txt-es">Rojo, Azul y Amarillo: colores base que no se obtienen de ninguna mezcla. Base del círculo cromático.</td>
+              <td class="term-def txt-en">Red, Blue, and Yellow: base colors not derived from any mixture. Foundation of the color wheel.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Secondary Colors','Colores Secundarios','Colores obtenidos al mezclar dos primarios: Verde (azul+amarillo), Naranja (rojo+amarillo) y Violeta (rojo+azul).')">
+              <td class="term-en">Secondary Colors</td>
+              <td class="term-es">Colores Secundarios</td>
+              <td class="term-def txt-es">Verde, Naranja y Violeta: obtenidos mezclando dos colores primarios a partes iguales.</td>
+              <td class="term-def txt-en">Green, Orange, and Violet: obtained by mixing two primary colors in equal parts.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Visual Identity','Identidad Visual','Conjunto de elementos gráficos — incluyendo colores, tipografías, formas e iconos — que definen la apariencia consistente de una marca o producto digital.')">
+              <td class="term-en">Visual Identity</td>
+              <td class="term-es">Identidad Visual</td>
+              <td class="term-def txt-es">Conjunto de colores, tipografías y elementos gráficos que definen la apariencia coherente de una marca.</td>
+              <td class="term-def txt-en">Set of colors, typefaces, and graphic elements defining the consistent appearance of a brand.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('User Experience (UX)','Experiencia de Usuario (UX)','Disciplina que estudia cómo las personas interactúan con productos digitales, abarcando usabilidad, accesibilidad, diseño visual e impacto emocional. El color es uno de sus pilares fundamentales.')">
+              <td class="term-en">User Experience (UX)</td>
+              <td class="term-es">Experiencia de Usuario</td>
+              <td class="term-def txt-es">Disciplina que estudia la interacción persona-producto digital. El color es uno de sus pilares fundamentales.</td>
+              <td class="term-def txt-en">Discipline studying person-digital product interaction. Color is one of its fundamental pillars.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Conic Gradient','Gradiente Cónico','Función CSS que crea un gradiente que rota alrededor de un punto central. Usada para recrear el círculo cromático en interfaces web: background: conic-gradient(red, yellow, green, blue, red)')">
+              <td class="term-en">Conic Gradient</td>
+              <td class="term-es">Gradiente Cónico</td>
+              <td class="term-def txt-es">Función CSS que crea gradientes en rotación alrededor de un centro. Usada para recrear ruedas de color en web.</td>
+              <td class="term-def txt-en">CSS function creating gradients rotating around a center point. Used to recreate color wheels on the web.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('HSL Color Model','Modelo de Color HSL','Modelo que describe colores mediante tres valores: Hue (matiz), Saturation (saturación) y Lightness (luminosidad). Más intuitivo que el hexadecimal para diseñadores.')">
+              <td class="term-en">HSL Color Model</td>
+              <td class="term-es">Modelo HSL</td>
+              <td class="term-def txt-es">Modelo que define colores por Matiz (H), Saturación (S) y Luminosidad (L). Más intuitivo que el hexadecimal.</td>
+              <td class="term-def txt-en">Model defining colors by Hue (H), Saturation (S), and Lightness (L). More intuitive than hexadecimal.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Warm Colors','Colores Cálidos','Rojo, naranja y amarillo. Evocan energía, calor, pasión y urgencia. En UX se usan para botones de acción, alertas de error y llamadas a la atención.')">
+              <td class="term-en">Warm Colors</td>
+              <td class="term-es">Colores Cálidos</td>
+              <td class="term-def txt-es">Rojo, naranja y amarillo. Transmiten energía, calor y urgencia. Usados para CTAs y alertas en UX.</td>
+              <td class="term-def txt-en">Red, orange, and yellow. Convey energy, warmth, and urgency. Used for CTAs and alerts in UX.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Cool Colors','Colores Fríos','Azul, verde y violeta. Transmiten calma, confianza y profesionalismo. Predominan en interfaces bancarias, de salud y tecnología.')">
+              <td class="term-en">Cool Colors</td>
+              <td class="term-es">Colores Fríos</td>
+              <td class="term-def txt-es">Azul, verde y violeta. Transmiten calma y confianza. Predominan en interfaces bancarias y de salud.</td>
+              <td class="term-def txt-en">Blue, green, and violet. Convey calm and trust. Predominant in banking and healthcare interfaces.</td>
+            </tr>
+
+            <tr style="cursor:pointer;" onclick="showTermModal('Design System','Sistema de Diseño','Conjunto de estándares, componentes y guías que definen cómo debe verse y comportarse un producto digital. Incluye un sistema de color definido con tokens, similar al catálogo Pantone.')">
+              <td class="term-en">Design System</td>
+              <td class="term-es">Sistema de Diseño</td>
+              <td class="term-def txt-es">Conjunto de estándares y componentes que definen la apariencia de un producto digital. Incluye sistema de color con tokens.</td>
+              <td class="term-def txt-en">Set of standards and components defining a digital product's appearance. Includes a color token system.</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-3 reveal" style="font-family:var(--font-mono); font-size:.68rem; color:var(--muted);">
+        <span class="txt-es">💡 Haz clic en cualquier fila para ver la definición completa en un modal.</span>
+        <span class="txt-en">💡 Click on any row to see the full definition in a modal.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ── MODAL Bootstrap (definición completa) ── -->
+  <div class="modal fade" id="termModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <p style="font-family:var(--font-mono); font-size:.65rem; color:var(--muted); letter-spacing:.12em; margin-bottom:.3rem;">TÉRMINO / TERM</p>
+            <h5 class="modal-title" id="modalTermEn" style="font-family:var(--font-display); color:var(--red);"></h5>
+            <p id="modalTermEs" style="font-family:var(--font-sans); font-size:.9rem; color:var(--mid); margin:0;"></p>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p style="font-family:var(--font-mono); font-size:.63rem; color:var(--muted); letter-spacing:.1em; margin-bottom:.75rem;">
+            <span class="txt-es">DEFINICIÓN</span>
+            <span class="txt-en">DEFINITION</span>
+          </p>
+          <p id="modalTermDef" style="color:var(--mid); line-height:1.75;"></p>
+        </div>
+        <div class="modal-footer" style="border-top:1px solid var(--border);">
+          <button type="button" class="btn-moda btn-moda-outline" data-bs-dismiss="modal">
+            <span class="txt-es">Cerrar</span>
+            <span class="txt-en">Close</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      Moda ECCI · <span>Teoría del Color</span> · Sara Viloria<br>
+      SENA — Centro de Manufactura en Textil y Cuero · Regional Distrito Capital · <span>ADSI 2025</span>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

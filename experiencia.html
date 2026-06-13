@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experiencia — Moda ECCI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <a href="index.html" class="topbar-logo">
+        <span class="dot"></span> Moda ECCI
+      </a>
+      <div class="topbar-controls">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleMenu()"
+          aria-label="Menú"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay">
+      <nav>
+        <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+        <div class="menu-divider"></div>
+        <a href="experiencia.html" data-es="Experiencia" data-en="Experience"
+          >Experiencia</a
+        >
+        <div class="menu-divider"></div>
+        <a href="glossary.html" data-es="Glosario" data-en="Glossary"
+          >Glosario</a
+        >
+        <div class="menu-divider"></div>
+        <a
+          href="sostenibilidad.html"
+          data-es="Sostenibilidad"
+          data-en="Sustainability"
+          >Sostenibilidad</a
+        >
+      </nav>
+      <p class="menu-close-hint">ESC para cerrar</p>
+    </div>
+
+    <!-- PAGE HEADER -->
+    <div class="page-hdr">
+      <div class="container">
+        <p class="eyebrow">
+          <span class="txt-es">Sara Viloria · Teoría del Color</span>
+          <span class="txt-en">Sara Viloria · Color Theory</span>
+        </p>
+        <h1>
+          <span class="txt-es"
+            >Mi experiencia en<br /><em
+              style="font-style: italic; color: var(--red)"
+              >Moda ECCI</em
+            ></span
+          >
+          <span class="txt-en"
+            >My experience at<br /><em
+              style="font-style: italic; color: var(--red)"
+              >ECCI Fashion</em
+            ></span
+          >
+        </h1>
+        <p class="txt-es">
+          Documentación bilingüe de los aprendizajes, reflexiones y momentos más
+          relevantes de la conferencia sobre teoría del color.
+        </p>
+        <p class="txt-en">
+          Bilingual documentation of the learnings, reflections, and most
+          relevant moments from the color theory lecture.
+        </p>
+      </div>
+    </div>
+
+    <!-- ── APRENDIZAJES PRINCIPALES ── -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5 reveal">
+            <p class="section-label">
+              <span class="txt-es">Lo que aprendí</span>
+              <span class="txt-en">What I learned</span>
+            </p>
+            <h2 class="section-title">
+              <span class="txt-es"><em>Aprendizajes</em> obtenidos</span>
+              <span class="txt-en"><em>Learnings</em> obtained</span>
+            </h2>
+            <p
+              class="txt-es"
+              style="
+                color: var(--mid);
+                line-height: 1.8;
+                margin-bottom: 1.25rem;
+              "
+            >
+              El evento Moda ECCI fue una experiencia académica reveladora que
+              conectó el mundo del diseño de moda con conceptos fundamentales
+              del desarrollo digital. Sara Viloria demostró que el color no es
+              simplemente estética: es lenguaje, ciencia y herramienta de
+              comunicación.
+            </p>
+            <p
+              class="txt-en"
+              style="
+                color: var(--mid);
+                line-height: 1.8;
+                margin-bottom: 1.25rem;
+              "
+            >
+              The ECCI Fashion event was a revealing academic experience that
+              connected the world of fashion design with fundamental digital
+              development concepts. Sara Viloria demonstrated that color is not
+              merely aesthetics: it is language, science, and a communication
+              tool.
+            </p>
+
+            <div class="quote-block">
+              <p class="txt-es">
+                "El color es la primera impresión que el usuario tiene de
+                cualquier interfaz. Elegirlo bien no es un detalle — es la base
+                del diseño."
+              </p>
+              <p class="txt-en">
+                "Color is the first impression a user has of any interface.
+                Choosing it well is not a detail — it is the foundation of
+                design."
+              </p>
+              <cite>Sara Viloria — Moda ECCI 2025</cite>
+            </div>
+
+            <div class="alert-moda warn mt-3">
+              <span class="alert-icon">💡</span>
+              <p class="txt-es mb-0">
+                El 85% de las decisiones de compra están influenciadas por el
+                color del producto o su interfaz. — Nielsen Norman Group
+              </p>
+              <p class="txt-en mb-0">
+                85% of purchase decisions are influenced by the color of the
+                product or its interface. — Nielsen Norman Group
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- ACCORDION -->
+            <div class="accordion reveal reveal-d1" id="accordionExp">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc1"
+                  >
+                    <span class="txt-es">🔬 Historia científica del color</span>
+                    <span class="txt-en">🔬 Scientific history of color</span>
+                  </button>
+                </h2>
+                <div
+                  id="acc1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExp"
+                >
+                  <div class="accordion-body">
+                    <p class="txt-es">
+                      Sara Viloria comenzó con la historia más fascinante y
+                      polémica de la ciencia del color.
+                      <strong>Isaac Newton</strong> (1666) fue el primero en
+                      descomponer la luz blanca con un prisma, demostrando que
+                      el color reside en la luz y no en los objetos. Lo
+                      sorprendente es que este hombre que revolucionó la óptica
+                      nació prematuro, era tartamudo, amenazó con quemar la casa
+                      de su madre con ella adentro, y en todo su período como
+                      miembro del Parlamento, solo habló una vez: para pedir que
+                      cerraran una ventana.
+                    </p>
+                    <p class="txt-en">
+                      Sara Viloria began with the most fascinating and
+                      controversial history in color science.
+                      <strong>Isaac Newton</strong> (1666) was the first to
+                      decompose white light with a prism, demonstrating that
+                      color resides in light, not in objects. Remarkably, this
+                      man who revolutionized optics was born premature, had a
+                      stutter, once threatened to burn his mother's house with
+                      her inside, and during his entire tenure as a Parliament
+                      member, he only spoke once — to ask someone to close a
+                      window.
+                    </p>
+                    <p class="txt-es" style="margin-top: 0.75rem">
+                      <strong>Johann Wolfgang von Goethe</strong> desafió a
+                      Newton con su Teoría de los Colores (1810), argumentando
+                      que la percepción del color es subjetiva y psicológica.
+                      Goethe fue pionero en estudiar cómo los colores afectan
+                      las emociones humanas — base de lo que hoy llamamos
+                      psicología del color y semiótica visual.
+                    </p>
+                    <p class="txt-en" style="margin-top: 0.75rem">
+                      <strong>Johann Wolfgang von Goethe</strong> challenged
+                      Newton with his Theory of Colors (1810), arguing that
+                      color perception is subjective and psychological. Goethe
+                      pioneered the study of how colors affect human emotions —
+                      the foundation of what we now call color psychology and
+                      visual semiotics.
+                    </p>
+                    <div class="harmony-row mt-2">
+                      <div
+                        class="swatch"
+                        style="background: hsl(0, 80%, 50%)"
+                        title="Rojo/Red"
+                      ></div>
+                      <div
+                        class="swatch"
+                        style="background: hsl(30, 80%, 55%)"
+                        title="Naranja/Orange"
+                      ></div>
+                      <div
+                        class="swatch"
+                        style="background: hsl(60, 80%, 50%)"
+                        title="Amarillo/Yellow"
+                      ></div>
+                      <div
+                        class="swatch"
+                        style="background: hsl(120, 60%, 40%)"
+                        title="Verde/Green"
+                      ></div>
+                      <div
+                        class="swatch"
+                        style="background: hsl(210, 80%, 50%)"
+                        title="Azul/Blue"
+                      ></div>
+                      <div
+                        class="swatch"
+                        style="background: hsl(270, 70%, 50%)"
+                        title="Violeta/Violet"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc2"
+                  >
+                    <span class="txt-es">⭕ ¿Por qué un círculo?</span>
+                    <span class="txt-en">⭕ Why a circle?</span>
+                  </button>
+                </h2>
+                <div
+                  id="acc2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExp"
+                >
+                  <div class="accordion-body">
+                    <p class="txt-es">
+                      Una de las preguntas más originales de la conferencia fue:
+                      ¿por qué representamos los colores en un círculo? La
+                      respuesta tiene raíces filosóficas y astronómicas. El
+                      filósofo pitagórico
+                      <strong>Filoalo</strong> fue la primera persona
+                      documentada en postular que la Tierra gira alrededor de un
+                      "fuego central". Esta idea fue retomada por Copérnico para
+                      la teoría heliocéntrica, y Newton se basó en Copérnico
+                      para desarrollar la ley de la gravedad.
+                    </p>
+                    <p class="txt-en">
+                      One of the most original questions from the conference
+                      was: why do we represent colors in a circle? The answer
+                      has philosophical and astronomical roots. The Pythagorean
+                      philosopher
+                      <strong>Philolaus</strong> was the first documented person
+                      to propose that Earth revolves around a "central fire."
+                      This idea was adopted by Copernicus for the heliocentric
+                      theory, and Newton built on Copernicus to develop the law
+                      of gravity.
+                    </p>
+                    <p class="txt-es" style="margin-top: 0.75rem">
+                      El círculo refleja la naturaleza continua y cíclica de las
+                      relaciones cromáticas: no hay inicio ni fin, igual que el
+                      espectro de la luz. Esta forma geométrica perfecta permite
+                      visualizar las armonías, los contrastes y las relaciones
+                      entre colores de manera intuitiva.
+                    </p>
+                    <p class="txt-en" style="margin-top: 0.75rem">
+                      The circle reflects the continuous and cyclical nature of
+                      chromatic relationships: there is no beginning or end,
+                      just like the light spectrum. This perfect geometric shape
+                      allows us to visualize harmonies, contrasts, and color
+                      relationships intuitively.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc3"
+                  >
+                    <span class="txt-es">🎯 Armonías cromáticas</span>
+                    <span class="txt-en">🎯 Chromatic harmonies</span>
+                  </button>
+                </h2>
+                <div
+                  id="acc3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExp"
+                >
+                  <div class="accordion-body">
+                    <p class="txt-es" style="margin-bottom: 0.75rem">
+                      Las armonías son combinaciones de colores que siguen
+                      reglas geométricas dentro del círculo cromático:
+                    </p>
+                    <p class="txt-en" style="margin-bottom: 0.75rem">
+                      Harmonies are color combinations that follow geometric
+                      rules within the color wheel:
+                    </p>
+                    <ul
+                      style="
+                        color: var(--mid);
+                        font-size: 0.875rem;
+                        line-height: 2;
+                        padding-left: 1.25rem;
+                      "
+                    >
+                      <li class="txt-es">
+                        <strong>Complementarios:</strong> colores opuestos en el
+                        círculo (máximo contraste).
+                      </li>
+                      <li class="txt-en">
+                        <strong>Complementary:</strong> colors directly opposite
+                        on the wheel (maximum contrast).
+                      </li>
+                      <li class="txt-es">
+                        <strong>Tríada:</strong> tres colores formando un
+                        triángulo equilátero o isósceles.
+                      </li>
+                      <li class="txt-en">
+                        <strong>Triadic:</strong> three colors forming an
+                        equilateral or isosceles triangle.
+                      </li>
+                      <li class="txt-es">
+                        <strong>Cuadrado:</strong> cuatro colores formando un
+                        cuadrado.
+                      </li>
+                      <li class="txt-en">
+                        <strong>Square (Tetradic):</strong> four colors forming
+                        a square.
+                      </li>
+                      <li class="txt-es">
+                        <strong>Rectángulo:</strong> cuatro colores en figura
+                        rectangular.
+                      </li>
+                      <li class="txt-en">
+                        <strong>Rectangle:</strong> four colors in a rectangular
+                        arrangement.
+                      </li>
+                      <li class="txt-es">
+                        <strong>Análogos:</strong> grupo de tres colores
+                        adyacentes (se tocan en el círculo).
+                      </li>
+                      <li class="txt-en">
+                        <strong>Analogous:</strong> group of three adjacent
+                        colors (touching on the wheel).
+                      </li>
+                    </ul>
+                    <p
+                      class="txt-es"
+                      style="
+                        margin-top: 0.75rem;
+                        color: var(--mid);
+                        font-size: 0.875rem;
+                      "
+                    >
+                      En UX y diseño de interfaces, usar una armonía definida no
+                      es solo estética: mejora la jerarquía visual, la
+                      accesibilidad y la coherencia de la experiencia de
+                      usuario.
+                    </p>
+                    <p
+                      class="txt-en"
+                      style="
+                        margin-top: 0.75rem;
+                        color: var(--mid);
+                        font-size: 0.875rem;
+                      "
+                    >
+                      In UX and interface design, using a defined harmony is not
+                      just aesthetics: it improves visual hierarchy,
+                      accessibility, and consistency of user experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc4"
+                  >
+                    <span class="txt-es"
+                      >🎭 Semiología y psicología del color</span
+                    >
+                    <span class="txt-en"
+                      >🎭 Color semiology and psychology</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="acc4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExp"
+                >
+                  <div class="accordion-body">
+                    <p class="txt-es">
+                      La semiología del color estudia los significados
+                      culturales y emocionales que los colores comunican. Goethe
+                      fue pionero en esta área: para él, el
+                      <strong>rojo</strong> representa pasión y energía; el
+                      <strong>azul</strong>, calma y confianza; el
+                      <strong>amarillo</strong>, optimismo y creatividad; el
+                      <strong>verde</strong>, naturaleza y equilibrio.
+                    </p>
+                    <p class="txt-en">
+                      Color semiology studies the cultural and emotional
+                      meanings that colors communicate. Goethe was a pioneer in
+                      this area: for him, <strong>red</strong> represents
+                      passion and energy; <strong>blue</strong>, calm and trust;
+                      <strong>yellow</strong>, optimism and creativity;
+                      <strong>green</strong>, nature and balance.
+                    </p>
+                    <p class="txt-es" style="margin-top: 0.75rem">
+                      Aplicado al desarrollo Frontend, esto significa que cada
+                      decisión de color en una interfaz comunica algo al
+                      usuario. Los botones de llamado a la acción (CTA) suelen
+                      ser rojos o naranjas porque generan urgencia. Las
+                      interfaces bancarias usan azul para transmitir seguridad.
+                    </p>
+                    <p class="txt-en" style="margin-top: 0.75rem">
+                      Applied to Frontend development, this means every color
+                      decision in an interface communicates something to the
+                      user. Call-to-action buttons are often red or orange
+                      because they generate urgency. Banking interfaces use blue
+                      to convey security.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc5"
+                  >
+                    <span class="txt-es"
+                      >🟦 Sistema Pantone y su aplicación</span
+                    >
+                    <span class="txt-en"
+                      >🟦 Pantone system and its application</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="acc5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExp"
+                >
+                  <div class="accordion-body">
+                    <p class="txt-es">
+                      El sistema <strong>Pantone</strong> es un lenguaje
+                      universal del color: cada tono tiene un código único que
+                      garantiza reproducción exacta en cualquier medio, país o
+                      tecnología. Fue creado en 1963 por Lawrence Herbert y hoy
+                      es el estándar de la industria en moda, diseño gráfico,
+                      packaging y producción digital.
+                    </p>
+                    <p class="txt-en">
+                      The <strong>Pantone</strong> system is a universal
+                      language of color: each hue has a unique code that
+                      guarantees exact reproduction in any medium, country, or
+                      technology. It was created in 1963 by Lawrence Herbert and
+                      is today the industry standard in fashion, graphic design,
+                      packaging, and digital production.
+                    </p>
+                    <p class="txt-es" style="margin-top: 0.75rem">
+                      En diseño de interfaces, los tokens de color (CSS
+                      variables, design tokens) cumplen una función similar al
+                      Pantone: asegurar consistencia cromática en todos los
+                      componentes de un sistema de diseño. Esta conexión entre
+                      moda y desarrollo de software fue uno de los aprendizajes
+                      más valiosos del evento.
+                    </p>
+                    <p class="txt-en" style="margin-top: 0.75rem">
+                      In interface design, color tokens (CSS variables, design
+                      tokens) fulfill a similar function to Pantone: ensuring
+                      chromatic consistency across all components of a design
+                      system. This connection between fashion and software
+                      development was one of the most valuable learnings from
+                      the event.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#acc6"
+                  >
+                    <span class="txt-es">💻 Color en UX y Frontend</span>
+                    <span class="txt-en">💻 Color in UX and Frontend</span>
+                  </button>
+                </h2>
+                <div
+                  id="acc6"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExp"
+                >
+                  <div class="accordion-body">
+                    <p class="txt-es">
+                      El color en el desarrollo Frontend no es un dato estético
+                      sino funcional. Determina la
+                      <strong>jerarquía visual</strong> (qué ve primero el
+                      usuario), la <strong>accesibilidad</strong> (contraste
+                      suficiente para personas con daltonismo), la
+                      <strong>identidad de marca</strong> y el
+                      <strong>estado de los componentes</strong> (activo,
+                      deshabilitado, error, éxito).
+                    </p>
+                    <p class="txt-en">
+                      Color in Frontend development is not merely an aesthetic
+                      element but a functional one. It determines
+                      <strong>visual hierarchy</strong> (what the user sees
+                      first), <strong>accessibility</strong> (sufficient
+                      contrast for color-blind users),
+                      <strong>brand identity</strong>, and
+                      <strong>component states</strong> (active, disabled,
+                      error, success).
+                    </p>
+                    <p class="txt-es" style="margin-top: 0.75rem">
+                      Las variables CSS (<code>--primary</code>,
+                      <code>--accent</code>, <code>--muted</code>) son la
+                      implementación técnica de un sistema de diseño cromático.
+                      Este sitio web mismo aplica una triada cromática (rojo,
+                      azul, dorado) que demuestra los principios enseñados por
+                      Sara Viloria.
+                    </p>
+                    <p class="txt-en" style="margin-top: 0.75rem">
+                      CSS variables (<code>--primary</code>,
+                      <code>--accent</code>, <code>--muted</code>) are the
+                      technical implementation of a chromatic design system.
+                      This very website applies a chromatic triad (red, blue,
+                      gold) that demonstrates the principles taught by Sara
+                      Viloria.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end accordion -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GALERÍA MULTIMEDIA ── -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="row mb-4 reveal">
+          <div class="col">
+            <p class="section-label">
+              <span class="txt-es">Multimedia · 11 fotos</span>
+              <span class="txt-en">Multimedia · 11 photos</span>
+            </p>
+            <h2 class="section-title">
+              <span class="txt-es"><em>Galería</em> del evento</span>
+              <span class="txt-en">Event <em>gallery</em></span>
+            </h2>
+            <p class="txt-es section-sub">
+              Momentos capturados durante la conferencia de Sara Viloria en Moda
+              ECCI.
+            </p>
+            <p class="txt-en section-sub">
+              Moments captured during Sara Viloria's lecture at ECCI Fashion.
+            </p>
+          </div>
+        </div>
+
+        <!-- BOOTSTRAP CAROUSEL — 11 fotos -->
+        <div class="carousel-wrap reveal">
+          <div
+            id="galeriaCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="4000"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="0"
+                class="active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="3"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="5"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="6"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="7"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="8"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="9"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#galeriaCarousel"
+                data-bs-slide-to="10"
+              ></button>
+            </div>
+
+            <div class="carousel-inner">
+              <!-- FOTO 1 -->
+              <div class="carousel-item active">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.41.54 PM.jpeg"
+                  alt="Moda ECCI - Foto 1"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">
+                    Foto 1 · Coloca tu imagen en assets/img/foto-1.jpg
+                  </p>
+                  <p class="txt-en">
+                    Photo 1 · Place your image at assets/img/foto-1.jpg
+                  </p>
+                </div>
+              </div>
+              <!-- FOTO 2 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.36 PM (1).jpeg"
+                  alt="Moda ECCI - Foto 2"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 2 · assets/img/foto-2.jpg</p>
+                  <p class="txt-en">Photo 2 · assets/img/foto-2.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 3 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.36 PM.jpeg"
+                  alt="Moda ECCI - Foto 3"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 3 · assets/img/foto-3.jpg</p>
+                  <p class="txt-en">Photo 3 · assets/img/foto-3.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 4 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.37 PM (1).jpeg"
+                  alt="Moda ECCI - Foto 4"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 4 · assets/img/foto-4.jpg</p>
+                  <p class="txt-en">Photo 4 · assets/img/foto-4.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 5 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.37 PM (2).jpeg"
+                  alt="Moda ECCI - Foto 5"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 5 · assets/img/foto-5.jpg</p>
+                  <p class="txt-en">Photo 5 · assets/img/foto-5.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 6 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.37 PM.jpeg"
+                  alt="Moda ECCI - Foto 6"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 6 · assets/img/foto-6.jpg</p>
+                  <p class="txt-en">Photo 6 · assets/img/foto-6.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 7 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.38 PM (1).jpeg"
+                  alt="Moda ECCI - Foto 7"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 7 · assets/img/foto-7.jpg</p>
+                  <p class="txt-en">Photo 7 · assets/img/foto-7.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 8 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.38 PM (2).jpeg"
+                  alt="Moda ECCI - Foto 8"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 8 · assets/img/foto-8.jpg</p>
+                  <p class="txt-en">Photo 8 · assets/img/foto-8.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 9 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.38 PM (3).jpeg"
+                  alt="Moda ECCI - Foto 9"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 9 · assets/img/foto-9.jpg</p>
+                  <p class="txt-en">Photo 9 · assets/img/foto-9.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 10 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.42.38 PM.jpeg"
+                  alt="Moda ECCI - Foto 10"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 10 · assets/img/foto-10.jpg</p>
+                  <p class="txt-en">Photo 10 · assets/img/foto-10.jpg</p>
+                </div>
+              </div>
+              <!-- FOTO 11 -->
+              <div class="carousel-item">
+                <img
+                  src="assets/img/WhatsApp Image 2026-06-12 at 9.41.54 PM.jpeg"
+                  alt="Moda ECCI - Foto 11"
+                />
+                <div class="carousel-caption">
+                  <p class="txt-es">Foto 11 · assets/img/foto-11.jpg</p>
+                  <p class="txt-en">Photo 11 · assets/img/foto-11.jpg</p>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#galeriaCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#galeriaCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <p
+          class="mt-3"
+          style="
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--muted);
+          "
+        >
+          <span class="txt-es"
+            >* Renombra tus fotos como foto-1.jpg, foto-2.jpg ... foto-11.jpg y
+            ponlas en la carpeta <code>assets/img/</code></span
+          >
+          <span class="txt-en"
+            >* Rename your photos as foto-1.jpg, foto-2.jpg ... foto-11.jpg and
+            place them in the <code>assets/img/</code> folder</span
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- ── REFLEXIÓN PERSONAL ── -->
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 reveal">
+            <p class="section-label">
+              <span class="txt-es">Reflexión personal</span>
+              <span class="txt-en">Personal reflection</span>
+            </p>
+            <h2 class="section-title">
+              <span class="txt-es"
+                >Industria creativa y <em>desarrollo de software</em></span
+              >
+              <span class="txt-en"
+                >Creative industry and <em>software development</em></span
+              >
+            </h2>
+            <p
+              class="txt-es"
+              style="color: var(--mid); line-height: 1.8; margin-bottom: 1rem"
+            >
+              Antes del evento, concebía el color como un elemento puramente
+              decorativo en el desarrollo Frontend. Moda ECCI cambió esa
+              perspectiva de manera radical. Comprendí que cada variable CSS de
+              color que defino en un sistema de diseño es, en esencia, un "token
+              Pantone" digital: un acuerdo tácito sobre cómo debe verse mi
+              producto en cualquier pantalla.
+            </p>
+            <p
+              class="txt-en"
+              style="color: var(--mid); line-height: 1.8; margin-bottom: 1rem"
+            >
+              Before the event, I conceived of color as a purely decorative
+              element in Frontend development. ECCI Fashion radically changed
+              that perspective. I understood that every CSS color variable I
+              define in a design system is, in essence, a digital "Pantone
+              token": a tacit agreement about how my product should look on any
+              screen.
+            </p>
+            <p class="txt-es" style="color: var(--mid); line-height: 1.8">
+              La industria de la moda y el desarrollo de software comparten más
+              de lo que parece: ambas trabajan con sistemas, con identidad
+              visual, con la experiencia del usuario final y con la necesidad de
+              comunicar emociones a través del diseño. Eventos como Moda ECCI
+              son exactamente el tipo de espacios que un desarrollador necesita
+              frecuentar.
+            </p>
+            <p class="txt-en" style="color: var(--mid); line-height: 1.8">
+              The fashion industry and software development share more than it
+              seems: both work with systems, visual identity, end-user
+              experience, and the need to communicate emotions through design.
+              Events like ECCI Fashion are exactly the kind of spaces a
+              developer needs to frequent.
+            </p>
+          </div>
+          <div class="col-lg-6 reveal reveal-d2">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="info-card">
+                  <div class="info-card-icon">🎯</div>
+                  <h4 data-es="Jerarquía visual" data-en="Visual hierarchy">
+                    Jerarquía visual
+                  </h4>
+                  <p class="txt-es">
+                    El color guía la mirada del usuario. Sin una jerarquía
+                    clara, la interfaz pierde dirección.
+                  </p>
+                  <p class="txt-en">
+                    Color guides the user's gaze. Without clear hierarchy, the
+                    interface loses direction.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="info-card">
+                  <div class="info-card-icon">♿</div>
+                  <h4 data-es="Accesibilidad" data-en="Accessibility">
+                    Accesibilidad
+                  </h4>
+                  <p class="txt-es">
+                    El contraste de color es un requisito WCAG. El buen diseño
+                    incluye a todos los usuarios.
+                  </p>
+                  <p class="txt-en">
+                    Color contrast is a WCAG requirement. Good design includes
+                    all users.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="info-card">
+                  <div class="info-card-icon">🔗</div>
+                  <h4 data-es="Consistencia" data-en="Consistency">
+                    Consistencia
+                  </h4>
+                  <p class="txt-es">
+                    Un sistema de color definido con CSS variables crea
+                    interfaces coherentes y mantenibles.
+                  </p>
+                  <p class="txt-en">
+                    A color system defined with CSS variables creates
+                    consistent, maintainable interfaces.
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="info-card">
+                  <div class="info-card-icon">💡</div>
+                  <h4 data-es="Emoción" data-en="Emotion">Emoción</h4>
+                  <p class="txt-es">
+                    Los colores comunican antes que las palabras. El primer
+                    segundo importa más que el resto.
+                  </p>
+                  <p class="txt-en">
+                    Colors communicate before words. The first second matters
+                    more than all the rest.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Moda ECCI · <span>Teoría del Color</span> · Sara Viloria<br />
+        SENA — Centro de Manufactura en Textil y Cuero · Regional Distrito
+        Capital · <span>ADSI 2025</span>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

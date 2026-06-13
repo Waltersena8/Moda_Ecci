@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moda ECCI — Teoría del Color</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ── TOP BAR ── -->
+  <header class="topbar">
+    <a href="index.html" class="topbar-logo">
+      <span class="dot"></span> Moda ECCI
+    </a>
+    <div class="topbar-controls">
+      <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ── MENU OVERLAY ── -->
+  <div class="menu-overlay" id="menuOverlay">
+    <nav>
+      <a href="index.html"         data-es="Inicio"         data-en="Home">Inicio</a>
+      <div class="menu-divider"></div>
+      <a href="experiencia.html"   data-es="Experiencia"    data-en="Experience">Experiencia</a>
+      <div class="menu-divider"></div>
+      <a href="glossary.html"      data-es="Glosario"       data-en="Glossary">Glosario</a>
+      <div class="menu-divider"></div>
+      <a href="sostenibilidad.html" data-es="Sostenibilidad" data-en="Sustainability">Sostenibilidad</a>
+    </nav>
+    <p class="menu-close-hint">ESC para cerrar</p>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section style="min-height:100vh; display:flex; align-items:stretch;">
+    <div class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">
+          <span class="txt-es">SENA · Centro de Manufactura en Textil y Cuero · 2025</span>
+          <span class="txt-en">SENA · Manufacturing Center in Textile and Leather · 2025</span>
+        </p>
+        <h1>
+          <span data-es="Moda" data-en="ECCI">Moda</span>
+          <em data-es="ECCI" data-en="Fashion">ECCI</em>
+        </h1>
+        <p class="hero-desc txt-es">
+          Una experiencia académica que conecta la teoría del color con el diseño de interfaces,
+          la identidad visual y la innovación aplicada a la industria creativa colombiana.
+        </p>
+        <p class="hero-desc txt-en">
+          An academic experience that connects color theory with interface design,
+          visual identity, and innovation applied to the Colombian creative industry.
+        </p>
+        <div class="hero-tags">
+          <span class="tag red"  data-es="Teoría del Color" data-en="Color Theory">Teoría del Color</span>
+          <span class="tag blue" data-es="Diseño Visual"    data-en="Visual Design">Diseño Visual</span>
+          <span class="tag gold" data-es="Pantone"          data-en="Pantone">Pantone</span>
+          <span class="tag"      data-es="Sara Viloria"     data-en="Sara Viloria">Sara Viloria</span>
+          <span class="tag"      data-es="UX · Frontend"    data-en="UX · Frontend">UX · Frontend</span>
+        </div>
+        <div class="d-flex gap-3 flex-wrap">
+          <a href="experiencia.html" class="btn-moda btn-moda-dark">
+            <span class="txt-es">Ver experiencia →</span>
+            <span class="txt-en">View experience →</span>
+          </a>
+          <a href="glossary.html" class="btn-moda btn-moda-outline">
+            <span class="txt-es">Glosario</span>
+            <span class="txt-en">Glossary</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="wheel-wrap">
+        <div class="color-wheel"></div>
+        <p class="wheel-label txt-es">Círculo cromático · Newton 1666</p>
+        <p class="wheel-label txt-en">Color Wheel · Newton 1666</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE EL EVENTO ── -->
+  <section class="section section-alt">
+    <div class="container">
+
+      <div class="alert-moda info mb-4 reveal">
+        <span class="alert-icon">🎨</span>
+        <div>
+          <strong class="txt-es">Evento académico</strong>
+          <strong class="txt-en">Academic event</strong>
+          <span class="txt-es"> — Conferencia por Sara Viloria sobre Teoría del Color, Pantone y semiología visual, dictada en la <em>Experiencia Académica Moda ECCI</em>.</span>
+          <span class="txt-en"> — Lecture by Sara Viloria on Color Theory, Pantone, and visual semiology, delivered at the <em>ECCI Fashion Academic Experience</em>.</span>
+          <button class="alert-dismiss ms-3" style="background:none;border:none;cursor:pointer;color:inherit;font-size:1.1rem;">✕</button>
+        </div>
+      </div>
+
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5 reveal">
+          <p class="section-label">
+            <span class="txt-es">Sobre el evento</span>
+            <span class="txt-en">About the event</span>
+          </p>
+          <h2 class="section-title">
+            <span class="txt-es">¿Qué es <em>Moda ECCI</em>?</span>
+            <span class="txt-en">What is <em>ECCI Fashion</em>?</span>
+          </h2>
+          <p class="txt-es" style="color:var(--mid); line-height:1.75; margin-bottom:1rem;">
+            Moda ECCI es un espacio académico interdisciplinar organizado por la Universidad ECCI
+            orientado hacia el diseño, la creatividad e innovación en la industria de la moda.
+            La jornada reunió a estudiantes, diseñadores y profesionales del sector creativo.
+          </p>
+          <p class="txt-en" style="color:var(--mid); line-height:1.75; margin-bottom:1rem;">
+            ECCI Fashion is an interdisciplinary academic space organized by ECCI University,
+            focused on design, creativity, and innovation in the fashion industry. The event
+            brought together students, designers, and creative sector professionals.
+          </p>
+          <p class="txt-es" style="color:var(--mid); line-height:1.75;">
+            La conferencia principal, impartida por <strong>Sara Viloria</strong>, profundizó en
+            la teoría del color: desde su historia científica hasta su aplicación práctica en diseño
+            gráfico, moda, UX e identidad visual.
+          </p>
+          <p class="txt-en" style="color:var(--mid); line-height:1.75;">
+            The main lecture, delivered by <strong>Sara Viloria</strong>, explored color theory in depth:
+            from its scientific history to its practical application in graphic design, fashion, UX,
+            and visual identity.
+          </p>
+        </div>
+        <div class="col-lg-7">
+          <div class="row g-3">
+            <div class="col-6 reveal reveal-d1">
+              <div class="info-card">
+                <div class="info-card-icon">🔴</div>
+                <h4 data-es="Primarios" data-en="Primaries">Primarios</h4>
+                <p class="txt-es">Rojo, Azul y Amarillo: los tres colores que no pueden obtenerse mezclando otros.</p>
+                <p class="txt-en">Red, Blue, and Yellow: the three colors that cannot be obtained by mixing others.</p>
+              </div>
+            </div>
+            <div class="col-6 reveal reveal-d2">
+              <div class="info-card">
+                <div class="info-card-icon">🟠</div>
+                <h4 data-es="Secundarios" data-en="Secondaries">Secundarios</h4>
+                <p class="txt-es">Verde, Naranja y Violeta: resultado de mezclar dos colores primarios a partes iguales.</p>
+                <p class="txt-en">Green, Orange, and Violet: results of mixing two primary colors in equal parts.</p>
+              </div>
+            </div>
+            <div class="col-6 reveal reveal-d3">
+              <div class="info-card">
+                <div class="info-card-icon">🎨</div>
+                <h4 data-es="Armonías" data-en="Harmonies">Armonías</h4>
+                <p class="txt-es">Combinaciones cromáticas con reglas geométricas: complementaria, tríada, análoga, cuadrada.</p>
+                <p class="txt-en">Chromatic combinations with geometric rules: complementary, triadic, analogous, square.</p>
+              </div>
+            </div>
+            <div class="col-6 reveal reveal-d4">
+              <div class="info-card">
+                <div class="info-card-icon">🟦</div>
+                <h4 data-es="Pantone" data-en="Pantone">Pantone</h4>
+                <p class="txt-es">Sistema universal de identificación cromática que garantiza reproducción exacta del color en cualquier medio.</p>
+                <p class="txt-en">Universal color identification system that ensures exact color reproduction in any medium.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVEGACIÓN HACIA PÁGINAS ── -->
+  <section class="section">
+    <div class="container">
+      <div class="row mb-5 reveal">
+        <div class="col-lg-6">
+          <p class="section-label">
+            <span class="txt-es">Explora el sitio</span>
+            <span class="txt-en">Explore the site</span>
+          </p>
+          <h2 class="section-title">
+            <span class="txt-es">Contenido <em>documentado</em></span>
+            <span class="txt-en">Documented <em>content</em></span>
+          </h2>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal reveal-d1">
+          <a href="experiencia.html" class="nav-card-link">
+            <div class="nav-card">
+              <p class="nav-card-num">01</p>
+              <h3 data-es="Mi Experiencia" data-en="My Experience">Mi Experiencia</h3>
+              <p class="txt-es">Aprendizajes, reflexiones y galería multimedia del evento Moda ECCI.</p>
+              <p class="txt-en">Learnings, reflections, and multimedia gallery from the ECCI Fashion event.</p>
+              <span class="nav-card-arrow txt-es">Ver experiencia →</span>
+              <span class="nav-card-arrow txt-en">View experience →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 reveal reveal-d2">
+          <a href="glossary.html" class="nav-card-link">
+            <div class="nav-card v-blue">
+              <p class="nav-card-num">02</p>
+              <h3 data-es="Glosario Técnico" data-en="Technical Glossary">Glosario Técnico</h3>
+              <p class="txt-es">Más de 15 términos del diseño visual y la teoría del color con definición bilingüe.</p>
+              <p class="txt-en">Over 15 visual design and color theory terms with bilingual definitions.</p>
+              <span class="nav-card-arrow txt-es">Ver glosario →</span>
+              <span class="nav-card-arrow txt-en">View glossary →</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 reveal reveal-d3">
+          <a href="sostenibilidad.html" class="nav-card-link">
+            <div class="nav-card v-gold">
+              <p class="nav-card-num">03</p>
+              <h3 data-es="Sostenibilidad" data-en="Sustainability">Sostenibilidad</h3>
+              <p class="txt-es">Reflexión sobre economía circular, tecnología y responsabilidad ambiental.</p>
+              <p class="txt-en">Reflection on circular economy, technology, and environmental responsibility.</p>
+              <span class="nav-card-arrow txt-es">Ver reflexión →</span>
+              <span class="nav-card-arrow txt-en">View reflection →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>
+      Moda ECCI · <span>Teoría del Color</span> · Sara Viloria<br>
+      SENA — Centro de Manufactura en Textil y Cuero · Regional Distrito Capital · <span>ADSI 2025</span>
+    </p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
